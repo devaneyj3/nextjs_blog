@@ -3,6 +3,8 @@ import React from "react";
 import classes from "./post-content.module.css";
 import PostHeader from "./post-header";
 
+import ReactMarkdown from "react-markdown";
+
 const POST = {
 	slug: "getting-started-with-nextjs3",
 	title: "Getting Started with Next JS",
@@ -17,7 +19,7 @@ export default function PostContent() {
 	return (
 		<article className={classes.content}>
 			<PostHeader title={POST.title} image={imagePath} />
-			{POST.content}
+			<ReactMarkdown>{POST.content}</ReactMarkdown>
 		</article>
 	);
 }
