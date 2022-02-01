@@ -1,5 +1,5 @@
-import Hero from "../component/Hero";
-import FeaturedPosts from "../component/FeaturedPosts";
+import Hero from "../component/hero";
+import FeaturedPosts from "../component/posts/featured-posts";
 
 const posts = [
 	{

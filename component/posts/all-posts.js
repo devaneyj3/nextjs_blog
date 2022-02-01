@@ -1,6 +1,6 @@
 import React from "react";
 
-import PostGrid from "../PostGrid";
+import PostGrid from "./post-grid";
 
 import classes from "./all-posts.module.css";
 export default function AllPosts({ posts }) {

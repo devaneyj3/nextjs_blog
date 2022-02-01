@@ -1,5 +1,5 @@
 import React from "react";
-import PostItem from "../PostItem";
+import PostItem from "./post-item";
 
 import classes from "./post-grid.module.css";
 

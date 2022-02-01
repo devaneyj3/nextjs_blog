@@ -1,4 +1,4 @@
-import AllPosts from "../../component/AllPosts";
+import AllPosts from "../../component/posts/all-posts";
 const posts = [
 	{
 		slug: "getting-started-with-nextjs3",
