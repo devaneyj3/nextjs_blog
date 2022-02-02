@@ -1,3 +1,5 @@
+import { MongoClient } from "mongodb";
+
 async function handler(req, res) {
 	if (req.method === "POST") {
 		const { email, name, message } = req.body;
@@ -19,6 +21,24 @@ async function handler(req, res) {
 			name: name,
 			message: message,
 		};
+
+		let client;
+		try {
+			client = await MongoClient.connect(
+				"mongodb+srv://devaneyj3:uPeiPLEx65SEaQna@cluster0.w3igl.mongodb.net/blog?retryWrites=true&w=majority"
+			);
+		} catch (error) {
+			res.status(500).json({ message: error.message });
+		}
+
+		const db = client.db();
+		try {
+			const result = await db.collection("emails").insertOne(newMessage);
+		} catch (error) {
+			client.close();
+			res.status(500).json({ message: "Storing message failed." });
+		}
+		client.close();
 
 		res
 			.status(201)
