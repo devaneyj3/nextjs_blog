@@ -1,5 +1,5 @@
-import Hero from "../component/hero";
-import FeaturedPosts from "../component/posts/featured-posts";
+import Hero from "../components/hero";
+import FeaturedPosts from "../components/posts/featured-posts";
 import { getFeaturedPosts } from "../lib/post-util";
 
 import Head from "next/head";

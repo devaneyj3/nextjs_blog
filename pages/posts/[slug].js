@@ -1,9 +1,8 @@
-import PostContent from "../../component/posts/post-detail/post-content";
+import PostContent from "../../components/posts/post-detail/post-content";
 
 import { getPostData, readFiles } from "../../lib/post-util";
 
 import Head from "next/head";
-
 const PostPage = ({ post }) => {
 	return (
 		<>
