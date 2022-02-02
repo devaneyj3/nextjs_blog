@@ -1,4 +1,5 @@
 import AllPosts from "../../component/posts/all-posts";
+import { getAllPosts } from "../../lib/post-util";
 const posts = [
 	{
 		slug: "getting-started-with-nextjs3",
@@ -28,5 +29,12 @@ const posts = [
 const AllPostsPage = () => {
 	return <AllPosts posts={posts} />;
 };
+export function getStaticProps(props) {
+	const allPosts = getAllPosts();
+	console.log(allPosts);
+	return {
+		props: {},
+	};
+}
 
 export default AllPostsPage;
