@@ -6,7 +6,7 @@ const ContactPage = () => {
 	return (
 		<>
 			<Head>
-				<meta name="description" content="Send me your messaages!" />
+				<meta name="description" content="Send me your messages!" />
 			</Head>
 			<ContactForm />;
 		</>
