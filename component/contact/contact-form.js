@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import axios from "axios";
-import Notification from "../ui/notification";
+import Notification from "../../ui/notification";
 
 import classes from "./contact-form.module.css";
 
