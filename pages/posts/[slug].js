@@ -2,8 +2,18 @@ import PostContent from "../../component/posts/post-detail/post-content";
 
 import { getPostData, readFiles } from "../../lib/post-util";
 
+import Head from "next/head";
+
 const PostPage = ({ post }) => {
-	return <PostContent post={post} />;
+	return (
+		<>
+			<Head>
+				<title>{post.title}</title>
+				<meta name="description" content={post.excerpt} />
+			</Head>
+			<PostContent post={post} />;
+		</>
+	);
 };
 
 export function getStaticPaths() {
